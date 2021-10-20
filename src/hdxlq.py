@@ -36,7 +36,7 @@ def fetchData() :
                 print(target.find(name="h3", attrs={'class':'mt'}).find_all_next(name='h3')[1].find_all_next(name='p')[j].get_text())
         # obj = {
         #     'id': i,
-        #     'name': target.find(name="h2"),
+        #     'name': target.find(name="h2").get_text(),
         #     'content': target.find(name="h3", attrs={'class':'mt'}).find(name="a").get_text(),
         #     'poem': target.find_all(name='h3')[1].find_next(name="p").get_text(),
         #     'explain': target.find_all(name='h3')[2].find_next(name="p").get_text(),

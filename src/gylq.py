@@ -28,7 +28,7 @@ def fetchData() :
         target = bs.find(name="div",attrs={"class":"mcon f14 l200"})
         obj = {
             'id': i,
-            'name': target.find(name="h2"),
+            'name': target.find(name="h2").get_text(),
             'content': target.find(name="h3", attrs={'class':'mt'}).find_next(name="p").get_text(),
             'poem': target.find_all(name='h3')[1].find_next(name="p").get_text(),
             'explain': target.find_all(name='h3')[2].find_next(name="p").get_text(),
